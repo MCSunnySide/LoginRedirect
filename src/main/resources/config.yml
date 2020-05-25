@@ -1,0 +1,18 @@
+rules:
+  directConnectToSunnySideWithLogin:
+    from: login
+    to: sunnyside
+    host:
+      - play.mcsunnyside.com
+      - game.mcsunnyside.com
+      - mc.mcsunnyside.com
+      - dx.mcsunnyside.com
+      - lt.mcsunnyside.com
+      - cn.mcsunnyside.com
+      - global.mcsunnyside.com
+      - fallback.mcsunnyside.com
+  directConnectToSunnySideWithout:
+    from: "#" # '#' = 入口，即直接加入后匹配规则
+    to: sunnyside
+    host:
+      - direct.mcsunnyside.com
