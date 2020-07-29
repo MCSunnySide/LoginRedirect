@@ -1,5 +1,5 @@
 rules:
-  directConnectToSunnySideWithLogin:
+  directConnectToSunnySideWithLogin: #BungeeCode set login is default server
     from: login
     to: sunnyside
     host:
@@ -11,8 +11,8 @@ rules:
       - cn.mcsunnyside.com
       - global.mcsunnyside.com
       - fallback.mcsunnyside.com
-  directConnectToSunnySideWithout:
-    from: "#" # '#' = 入口，即直接加入后匹配规则
+  directConnectToSunnySideWithoutLogin: #BungeeCode set random server is default server
+    from: "#" # '#' = Enter point
     to: sunnyside
     host:
       - direct.mcsunnyside.com
