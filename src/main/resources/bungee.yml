@@ -1,3 +1,3 @@
 name: LoginRedirect
 version: ${project.version}
-main: net.mcxk.loginredirect.LoginRedirect
+main: com.mcsunnyside.loginredirect.LoginRedirect
