@@ -83,11 +83,17 @@ public final class LoginRedirect extends Plugin implements Listener {
 
     @EventHandler
     public void onSwitch(ServerSwitchEvent e) {
-        String from = e.getFrom().getName();
+        String from;
+        if (e.getFrom() == null) {
+            from = "#";
+        } else {
+            from = e.getFrom().getName();
+        }
+
         for (RedirectRule rule : redirectRuleList) {
             if (rule.matches(from, e.getPlayer().getPendingConnection().getVirtualHost().getHostName())) {
                 e.getPlayer().connect(getProxy().getServerInfo(rule.getTo()));
-                getLogger().info("Transfer the player " + e.getPlayer().getName() + " to the server " + rule.getTo());
+                getLogger().info("Transfer/Hook the player " + e.getPlayer().getName() + " to the server " + rule.getTo());
                 return;
             }
         }
